@@ -33,15 +33,17 @@ class App extends Component {
           >
             Learn React
           </a>
-          <button onClick={()=>{
-            this.setState({
-              name:{
-                firstName:'rohit',
-                lastName:'sharma'
+          <button onClick={() => {
+              this.setState(()=>{
+                return { 
+                  name:{ firstName:'rohit', lastName:'sharma' } 
+                }
               },
-            })
-            console.log(this.state)
-          }}>Change name</button>
+              ()=>{
+                console.log(this.state);
+              })
+            }
+          }>Change name</button>
         </header>
       </div>
     );
